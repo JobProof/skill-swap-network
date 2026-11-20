@@ -4,39 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Skill Swap Network — Trade skills, not dollars</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #1f2937; background: #f8fafc; line-height: 1.6; }
+  body { font-family: 'Baloo 2', system-ui, sans-serif; color: #3a2e39; background: #fff7ec; line-height: 1.6; }
   .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-  header { background: #0f766e; color: white; padding: 16px 0; }
-  header .wrap { display: flex; justify-content: space-between; align-items: center; }
-  .logo { font-size: 1.25rem; font-weight: 700; }
-  nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
-  nav a:hover { text-decoration: underline; }
-  .hero { background: linear-gradient(135deg, #0f766e, #115e59); color: white; text-align: center; padding: 80px 20px; }
-  .hero h1 { font-size: 2.6rem; margin-bottom: 16px; }
-  .hero p { font-size: 1.2rem; max-width: 640px; margin: 0 auto 32px; opacity: 0.95; }
-  .btn { display: inline-block; background: #f59e0b; color: #1f2937; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
-  .btn:hover { background: #d97706; }
-  section { padding: 56px 0; }
-  h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
-  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-  .card { background: white; border-radius: 12px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-  .card h3 { color: #0f766e; margin-bottom: 10px; }
-  .badge { display: inline-block; background: #ccfbf1; color: #0f766e; border-radius: 999px; padding: 2px 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
-  .meta { color: #6b7280; font-size: 0.9rem; margin-top: 12px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-  .cta { background: #0f766e; color: white; text-align: center; }
+  header { background: #ff6b6b; color: white; padding: 14px 0; box-shadow: 0 4px 0 rgba(0,0,0,0.06); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .logo { font-size: 1.4rem; font-weight: 800; }
+  nav a { color: white; text-decoration: none; margin-left: 18px; font-weight: 700; }
+  nav a:hover { text-decoration: underline wavy; }
+  .hero { text-align: center; padding: 90px 20px 80px; background: radial-gradient(circle at 20% 20%, rgba(78,205,196,0.25) 0 40px, transparent 41px), radial-gradient(circle at 80% 60%, rgba(255,217,61,0.35) 0 60px, transparent 61px), linear-gradient(160deg, #4ecdc4, #ffe66d); }
+  .hero .emoji { font-size: 4rem; display: block; margin-bottom: 12px; }
+  .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 16px; color: #2b2d42; }
+  .hero p { font-size: 1.25rem; max-width: 620px; margin: 0 auto 30px; font-weight: 500; color: #3a3a4a; }
+  .btn { display: inline-block; background: #ff6b6b; color: white; font-weight: 800; font-size: 1.1rem; padding: 16px 36px; border-radius: 999px; text-decoration: none; box-shadow: 0 6px 0 #d94f4f; transition: transform 0.1s; border: none; cursor: pointer; }
+  .btn:hover { transform: translateY(2px); box-shadow: 0 4px 0 #d94f4f; }
+  section { padding: 60px 0; }
+  h2 { text-align: center; font-size: 2.2rem; margin-bottom: 12px; color: #2b2d42; }
+  .sub { text-align: center; font-weight: 600; color: #6c5b7b; margin-bottom: 40px; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 26px; }
+  .card { background: white; border-radius: 24px; padding: 28px; box-shadow: 0 8px 20px rgba(0,0,0,0.07); border: 3px solid #2b2d42; position: relative; }
+  .card:nth-child(odd) { transform: rotate(-1deg); }
+  .card:nth-child(even) { transform: rotate(1deg); }
+  .card:hover { transform: rotate(0deg) scale(1.03); transition: 0.15s; }
+  .card .big-emoji { font-size: 2.6rem; display: block; margin-bottom: 10px; }
+  .card h3 { color: #ff6b6b; margin-bottom: 8px; font-size: 1.4rem; }
+  .badge { display: inline-block; background: #4ecdc4; color: #2b2d42; border-radius: 999px; padding: 3px 14px; font-size: 0.85rem; font-weight: 800; margin-bottom: 10px; }
+  .meta { color: #6c5b7b; font-size: 0.95rem; margin-top: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px; }
+  .cta { background: #ff6b6b; text-align: center; }
   .cta h2 { color: white; }
-  .cta .btn { margin-top: 8px; }
-  footer { background: #134e4a; color: #99f6e4; text-align: center; padding: 32px 20px; font-size: 0.9rem; }
+  .cta p { color: #ffe3e3; font-weight: 600; max-width: 560px; margin: 0 auto 10px; }
+  .cta .btn { background: #2b2d42; box-shadow: 0 6px 0 #14151f; margin-top: 14px; }
+  .cta .btn:hover { box-shadow: 0 4px 0 #14151f; }
+  footer { background: #2b2d42; color: #c3c3d8; text-align: center; padding: 32px 20px; font-size: 0.95rem; }
+  .pill-note { text-align: center; margin-top: 28px; color: #6c5b7b; font-weight: 600; }
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <div class="logo">Skill Swap Network</div>
+    <div class="logo">🔁 Skill Swap Network</div>
     <nav>
       <a href="#how">How It Works</a>
       <a href="#browse">Browse</a>
@@ -46,29 +57,34 @@
 </header>
 
 <div class="hero">
-  <h1>Trade skills, not dollars</h1>
-  <p>Skill Swap Network connects neighbors to exchange help hour-for-hour. Post what you need, offer what you're good at, and swap time instead of money.</p>
-  <a href="#join" class="btn">Get Started</a>
+  <span class="emoji">🛠️🤝🪄</span>
+  <h1>Got skills? Trade 'em!</h1>
+  <p>Your neighborhood's skill playground. Post what you need, offer what you love doing, and swap hours instead of dollars.</p>
+  <a href="#join" class="btn">Let's Get Swapping 🎉</a>
 </div>
 
 <section id="how">
   <div class="wrap">
     <h2>How It Works</h2>
+    <p class="sub">Three easy steps. Zero awkward money talk.</p>
     <div class="steps">
       <div class="card">
+        <span class="big-emoji">🙋</span>
         <div class="badge">Step 1</div>
         <h3>Post a Need</h3>
-        <p>Describe the task you need help with and estimate the hours — a leaky faucet, a garden bed, a laptop tune-up.</p>
+        <p>Leaky faucet? Computer running slow? Post it, guess the hours, and let the neighbors come to the rescue.</p>
       </div>
       <div class="card">
+        <span class="big-emoji">💪</span>
         <div class="badge">Step 2</div>
         <h3>Offer a Skill</h3>
-        <p>List what you can do for others. Match with someone nearby who needs what you offer.</p>
+        <p>Show off what you're great at — fixing, painting, tutoring, baking. Somebody nearby needs exactly you.</p>
       </div>
       <div class="card">
+        <span class="big-emoji">🤝</span>
         <div class="badge">Step 3</div>
         <h3>Swap & Confirm</h3>
-        <p>Agree on a swap, track hours traded, upload proof photos, and confirm when both sides are done.</p>
+        <p>Make the trade, snap proof photos, track your hours, high-five when it's done. Everybody wins.</p>
       </div>
     </div>
   </div>
@@ -76,41 +92,45 @@
 
 <section id="browse">
   <div class="wrap">
-    <h2>Recent Needs & Offers</h2>
+    <h2>What's Swapping Right Now</h2>
+    <p class="sub">A peek at recent needs & offers around town</p>
     <div class="grid">
       <div class="card">
-        <div class="badge">Need — Home Repair</div>
-        <h3>Fix dripping kitchen faucet</h3>
-        <p>Cartridge replacement, I have the parts. Flexible on timing.</p>
+        <div class="badge">🙋 Need — Home Repair</div>
+        <span class="big-emoji">🚰</span>
+        <h3>Fix my drippy kitchen faucet</h3>
+        <p>I've got the parts, I just need the know-how (and maybe the muscles).</p>
         <div class="meta">~2 hours · Sioux Falls, SD</div>
       </div>
       <div class="card">
-        <div class="badge">Offer — Tech Help</div>
-        <h3>Laptop cleanup & tune-up</h3>
-        <p>Speed up slow computers, remove bloatware, set up backups.</p>
+        <div class="badge">💪 Offer — Tech Help</div>
+        <span class="big-emoji">💻</span>
+        <h3>Laptop rescue & tune-up</h3>
+        <p>Slow computer? I'll clean it up, cut the bloatware, and set up backups like new.</p>
         <div class="meta">~2 hours · Sioux Falls, SD</div>
       </div>
       <div class="card">
-        <div class="badge">Offer — Yard Work</div>
-        <h3>Fall leaf cleanup</h3>
-        <p>Hour for hour with anyone who can help with painting instead.</p>
+        <div class="badge">💪 Offer — Yard Work</div>
+        <span class="big-emoji">🍂</span>
+        <h3>Leaf-busting marathon</h3>
+        <p>I'll conquer your leaves if you help me paint my fence. Fair trade?</p>
         <div class="meta">~3 hours · Remote OK</div>
       </div>
     </div>
-    <p style="text-align:center; margin-top:24px; color:#6b7280;">Sample listings shown while the app is in development.</p>
+    <p class="pill-note">✨ Sample listings — the real ones arrive with the app!</p>
   </div>
 </section>
 
 <section id="join" class="cta">
   <div class="wrap">
-    <h2>Ready to start swapping?</h2>
-    <p>Join your neighborhood's skill network. No fees — just fair trades of time.</p>
-    <a href="#" class="btn">Join the Waitlist</a>
+    <h2>Ready to join the fun?</h2>
+    <p>One small monthly subscription. Unlimited skill swaps with your neighbors — trade as much as you like, your wallet stays comfy.</p>
+    <a href="#" class="btn">Start My Subscription 🚀</a>
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2026 Skill Swap Network · Built as a community project</p>
+  <p>© 2026 Skill Swap Network · Built with 💛 for the neighborhood</p>
 </footer>
 
 </body>
