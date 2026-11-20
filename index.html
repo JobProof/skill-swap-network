@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skill Swap Network — Trade skills, not dollars</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #1f2937; background: #f8fafc; line-height: 1.6; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+  header { background: #0f766e; color: white; padding: 16px 0; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-size: 1.25rem; font-weight: 700; }
+  nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+  nav a:hover { text-decoration: underline; }
+  .hero { background: linear-gradient(135deg, #0f766e, #115e59); color: white; text-align: center; padding: 80px 20px; }
+  .hero h1 { font-size: 2.6rem; margin-bottom: 16px; }
+  .hero p { font-size: 1.2rem; max-width: 640px; margin: 0 auto 32px; opacity: 0.95; }
+  .btn { display: inline-block; background: #f59e0b; color: #1f2937; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+  .btn:hover { background: #d97706; }
+  section { padding: 56px 0; }
+  h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .card { background: white; border-radius: 12px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .card h3 { color: #0f766e; margin-bottom: 10px; }
+  .badge { display: inline-block; background: #ccfbf1; color: #0f766e; border-radius: 999px; padding: 2px 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+  .meta { color: #6b7280; font-size: 0.9rem; margin-top: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .cta { background: #0f766e; color: white; text-align: center; }
+  .cta h2 { color: white; }
+  .cta .btn { margin-top: 8px; }
+  footer { background: #134e4a; color: #99f6e4; text-align: center; padding: 32px 20px; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">Skill Swap Network</div>
+    <nav>
+      <a href="#how">How It Works</a>
+      <a href="#browse">Browse</a>
+      <a href="#join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Trade skills, not dollars</h1>
+  <p>Skill Swap Network connects neighbors to exchange help hour-for-hour. Post what you need, offer what you're good at, and swap time instead of money.</p>
+  <a href="#join" class="btn">Get Started</a>
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="card">
+        <div class="badge">Step 1</div>
+        <h3>Post a Need</h3>
+        <p>Describe the task you need help with and estimate the hours — a leaky faucet, a garden bed, a laptop tune-up.</p>
+      </div>
+      <div class="card">
+        <div class="badge">Step 2</div>
+        <h3>Offer a Skill</h3>
+        <p>List what you can do for others. Match with someone nearby who needs what you offer.</p>
+      </div>
+      <div class="card">
+        <div class="badge">Step 3</div>
+        <h3>Swap & Confirm</h3>
+        <p>Agree on a swap, track hours traded, upload proof photos, and confirm when both sides are done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="browse">
+  <div class="wrap">
+    <h2>Recent Needs & Offers</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="badge">Need — Home Repair</div>
+        <h3>Fix dripping kitchen faucet</h3>
+        <p>Cartridge replacement, I have the parts. Flexible on timing.</p>
+        <div class="meta">~2 hours · Sioux Falls, SD</div>
+      </div>
+      <div class="card">
+        <div class="badge">Offer — Tech Help</div>
+        <h3>Laptop cleanup & tune-up</h3>
+        <p>Speed up slow computers, remove bloatware, set up backups.</p>
+        <div class="meta">~2 hours · Sioux Falls, SD</div>
+      </div>
+      <div class="card">
+        <div class="badge">Offer — Yard Work</div>
+        <h3>Fall leaf cleanup</h3>
+        <p>Hour for hour with anyone who can help with painting instead.</p>
+        <div class="meta">~3 hours · Remote OK</div>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:24px; color:#6b7280;">Sample listings shown while the app is in development.</p>
+  </div>
+</section>
+
+<section id="join" class="cta">
+  <div class="wrap">
+    <h2>Ready to start swapping?</h2>
+    <p>Join your neighborhood's skill network. No fees — just fair trades of time.</p>
+    <a href="#" class="btn">Join the Waitlist</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Skill Swap Network · Built as a community project</p>
+</footer>
+
+</body>
+</html>
